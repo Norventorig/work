@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="Practice_work_2_style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -29,7 +30,7 @@
                 <td></td>
 
                 <td>
-                    <input type="radio" id="name" name="strong">
+                    <input type="radio" id="strong" name="strong" value="Сильная">
                     <label for="strong">Сильная</label>
                 </td>
             </tr>
@@ -40,7 +41,7 @@
                 </td>
 
                 <td>
-                    <input type="radio" id="name" name="medium">
+                    <input type="radio" id="mid" name="strong" value="Средняя">
                     <label for="medium">Средняя</label>
                 </td>
             </tr>
@@ -49,7 +50,7 @@
                 <td></td>
 
                 <td>
-                    <input type="radio" id="name" name="weak">
+                    <input type="radio" id="weak" name="strong" value="Слабая">
                     <label for="weak">Слабая</label>
                 </td>
             </tr>
@@ -102,11 +103,38 @@
             </tr>
         </thead>
 
-        <tbody>
-            <!--Реализуй таблицу по нажатию кнопки-->
-        </tbody>
     </table>
 
-    <script data-src="https://queen-leksa.github.io/111/script.js"></script>
+    <script> 
+        const f = document.forms[0]; 
+        let tr = document.getElementById("table"); 
+        let t = tr; 
+        f.addEventListener("submit", (e) => { 
+            e.preventDefault(); 
+            let body = {}; 
+            for (let i = 0; i < f.elements.length; i++) { 
+                let tag = f[i]; 
+                if (tag.name) { 
+                    if (tag.type === "radio" && tag.checked) { 
+                        body[tag.name] = tag.value; 
+                    } else if (tag.type !== "radio") { 
+                        body[tag.name] = tag.value; 
+                    } 
+                } 
+            } 
+            console.log(body); 
+            let html = "<tr>"; 
+            html += `<td><img src="${body.image}" width="50" alt="${body.title}"></td>`; 
+            html += `<td>${body.title || ""}</td>`; 
+            html += `<td>${body.sort || ""}</td>`; 
+            html += `<td>${body.strong || ""}</td>`; 
+            html += `<td>${body.cost || ""}</td>`; 
+            html += `<td>${body.description || ""}</td>`; 
+            html += "</tr>" 
+            t.innerHTML += html; 
+        }) 
+    </script>
+    
+
 </body>
 </html>
