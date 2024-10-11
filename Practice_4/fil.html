@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Module</title>
+    <style>
+        body {
+            background-color: orange;
+        }
+        .navbar { 
+            display: flex; 
+            justify-content: center; 
+            padding: 60px; 
+        }
+        .header-title {
+            font-family: 'Verdana', sans-serif; /* Изменён шрифт */
+            font-weight: bold;
+            font-size: 3.5rem;
+            color: white;
+        }
+        .content-blocks {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        .first-row {
+            display: flex;
+            flex-direction: row;
+        }
+        .block-item1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px; 
+            height: 350px; 
+            cursor: pointer; 
+            background-color: white; 
+            margin: 15px;
+            border-radius: 5%;
+        }
+        .second-row {
+            display: flex;
+            flex-direction: row;
+        }
+        .block-item2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px; 
+            height: 350px; 
+            cursor: pointer; 
+            background-color: white; 
+            margin: 15px;
+            border-radius: 5%;
+        }
+        .item-number1, .item-number2 {
+            font-family: 'Verdana', sans-serif; /* Изменён шрифт */
+            font-weight: bold;
+            font-size: 3.5rem;
+            color: orange;
+            margin: 30px;
+        }
+        .item-text1, .item-text2 {
+            width: 75%;
+            font-family: 'Verdana', sans-serif; /* Изменён шрифт */
+            font-style: italic;
+            text-align: center; 
+            color: rgb(60, 60, 60);
+        }
+        .learn-more1, .learn-more2 {
+            font-family: 'Verdana', sans-serif; /* Изменён шрифт */
+            text-align: center;
+            color: rgb(60, 60, 60);
+            margin: 40px;
+            text-decoration: underline;
+            text-decoration-color: orange;
+            text-underline-offset: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar"> 
+        <div class="header-title">Design and Development</div>
+    </div>
+    <div class="content-blocks"> 
+        <div class="first-row"> 
+            <div class="block-item1">
+                <div class="item-number1">01</div>
+                <div class="item-text1">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                <div class="learn-more1">LEARN MORE</div>
+           </div>
+           <div class="block-item1">
+                <div class="item-number1">02</div>
+                <div class="item-text1">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                <div class="learn-more1">LEARN MORE</div>
+           </div>
+           <div class="block-item1">
+                <div class="item-number1">03</div>
+                <div class="item-text1">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                <div class="learn-more1">LEARN MORE</div>
+           </div>
+       </div>
+       <div class="second-row"> 
+           <div class="block-item2">
+               <div class="item-number2">04</div>
+               <div class="item-text2">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+               <div class="learn-more2">LEARN MORE</div>
+           </div>
+           <div class="block-item2">
+               <div class="item-number2">05</div>
+               <div class="item-text2">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+               <div class="learn-more2">LEARN MORE</div>
+           </div>
+           <div class="block-item2">
+               <div class="item-number2">06</div>
+               <div class="item-text2">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+               <div class="learn-more2">LEARN MORE</div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
